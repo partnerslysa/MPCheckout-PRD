@@ -1,14 +1,14 @@
 {
-  "name": "sbxcheckoutmp",
+  "name": "mercadopago-checkout-pro-prd",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
-  "author": "",
+  "author": "Partnersly",
   "license": "ISC",
-  "description": "",
+  "description": "Mercado Pago Checkout Pro Middleware",
   "engines": {
     "node": "14.15.0"
   },
@@ -20,5 +20,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/partnerslysa/MPCheckout-PRD.git"
+  },
+  "bugs": {
+    "url": "https://github.com/partnerslysa/MPCheckout-PRD/issues"
+  },
+  "homepage": "https://github.com/partnerslysa/MPCheckout-PRD#readme"
 }
