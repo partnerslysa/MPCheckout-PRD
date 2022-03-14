@@ -72,6 +72,8 @@ app.post("/create_preference", verifyToken, async (req, res) => {
 		items.push(objItem);
 	}
 
+	let processing_modes = ['gateway'];
+
 	let preference = {
 		items : items,
 		back_urls: {
@@ -80,7 +82,8 @@ app.post("/create_preference", verifyToken, async (req, res) => {
 			"pending": req.body.pendingUrl
 		},
 		auto_return: 'approved',
-		external_reference: req.body.external_reference
+		external_reference: req.body.external_reference,
+		processing_modes: processing_modes
 	};
 
 	mercadopago.preferences.create(preference).then(function (response) {
