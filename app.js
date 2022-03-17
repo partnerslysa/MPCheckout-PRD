@@ -97,14 +97,14 @@ app.post("/create_preference", verifyToken, async (req, res) => {
 app.post('/notificationMP', function (request, response) {
 
 	let record = new notification();
-	record.type = request.query["type"];
-	record.id = request.query["data.id"];
+	record.type = request.body["type"];
+	record.id = request.body["data"]["id"];
 		
 	record.save().then(function (id) {
 		
 		response.status(201).json({
-			type: request.query["type"],
-			id: request.query["data.id"]
+			type: request.body["type"],
+			id: request.body["data"]["id"]
 		});
 	})
 	.catch(function (error) {	
