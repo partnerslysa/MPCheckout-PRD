@@ -83,7 +83,7 @@ app.post("/create_preference", verifyToken, async (req, res) => {
 		},
 		auto_return: 'approved',
 		external_reference: req.body.external_reference,
-		processing_modes: processing_modes
+		processing_modes: 'gateway'
 	};
 
 	mercadopago.preferences.create(preference).then(function (response) {
