@@ -102,13 +102,13 @@ app.post('/notificationMP', function (request, response) {
 
 	if (hasOwnProperty(request.body["id"]))
 	{
-		request.body["id"];
+		record.id = request.body["id"];
 	}
 	else
 	{
 		if (hasOwnProperty(request.body["data"]["id"]))
 		{
-			request.body["data"]["id"];
+			record.id = request.body["data"]["id"];
 		}
 	}
 		
