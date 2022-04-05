@@ -98,7 +98,19 @@ app.post('/notificationMP', function (request, response) {
 
 	let record = new notification();
 	record.type = request.body["type"];
-	record.id = request.body["data"]["id"];
+	record.id = "";
+
+	if (hasOwnProperty(request.body["id"]))
+	{
+		request.body["id"];
+	}
+	else
+	{
+		if (hasOwnProperty(request.body["data"]["id"]))
+		{
+			request.body["data"]["id"];
+		}
+	}
 		
 	record.save().then(function (id) {
 		
