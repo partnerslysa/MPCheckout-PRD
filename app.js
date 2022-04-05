@@ -100,23 +100,24 @@ app.post('/notificationMP', function (request, response) {
 	record.type = request.body["type"];
 	record.id = "";
 
-	if (hasOwnProperty(request.body["id"]))
+	if (request.body["data"])
 	{
-		record.id = request.body["id"];
-	}
-	else
-	{
-		if (hasOwnProperty(request.body["data"]["id"]))
+		if (request.body["data"]["id"])
 		{
 			record.id = request.body["data"]["id"];
 		}
+	}
+
+	if (record.id == "")
+	{
+		record.id = request.body["id"];
 	}
 		
 	record.save().then(function (id) {
 		
 		response.status(201).json({
-			type: request.body["type"],
-			id: request.body["data"]["id"]
+			type: record.type,
+			id: record.id
 		});
 	})
 	.catch(function (error) {	
