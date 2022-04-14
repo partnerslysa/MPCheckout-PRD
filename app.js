@@ -72,10 +72,24 @@ app.post("/create_preference", verifyToken, async (req, res) => {
 		items.push(objItem);
 	}
 
+	let identificationPayer = {};
+	identificationPayer.type = "DNI";
+	identificationPayer.number = req.body.payer.dni;
+
+	let phonePayer = {};
+	phonePayer.area_code = '';
+	phonePayer.number = req.body.payer.phone;
+
+	let payer = {};
+	payer.name = req.body.payer.name;
+	payer.surname = req.body.payer.surname;
+	payer.email = req.body.payer.email;
+	payer.identification = identificationPayer;
 	let processing_modes = ['gateway'];
 
 	let preference = {
 		items : items,
+		payer : payer,
 		back_urls: {
 			"success": req.body.successUrl,
 			"failure": req.body.failureUrl,
