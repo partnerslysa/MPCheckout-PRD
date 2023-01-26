@@ -85,7 +85,7 @@ app.post("/create_preference", verifyToken, async (req, res) => {
 	payer.surname = req.body.payer.surname;
 	payer.email = req.body.payer.email;
 	payer.identification = identificationPayer;
-	let processing_modes = ['gateway'];
+	let processing_modes = ['aggregator'];
 
 	let preference = {
 		items : items,
