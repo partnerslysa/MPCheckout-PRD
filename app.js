@@ -27,7 +27,7 @@ app.get("/", verifyToken, async function (req, res) {
 	})
 }); 
 
-app.post("/getToken", async (req, res) => {
+/*app.post("/getToken", async (req, res) => {
 
 	users = await user.findById(req.body.id).then((document)=>
 	{
@@ -55,10 +55,10 @@ app.post("/getToken", async (req, res) => {
 			message: `Introduzca combinación de user y pass válida para generar token`
 		});
 	});
-}); 
+});*/ 
 
 //SERVICIO DESTINADO A CREAR LAS PREFERENCIAS DE MERCADO PAGO
-app.post("/create_preference", verifyToken, async (req, res) => {
+/*app.post("/create_preference", verifyToken, async (req, res) => {
 
 	mercadopago.configurations.setAccessToken(req.body.accessToken);
 
@@ -151,10 +151,10 @@ app.get("/getNotifications", verifyToken, async (req, res) => {
 	res.status(200).json({
 		notifications: notifications
 	})
-});
+});*/
 
 //SERVICIO DESTINADO A MARCAR LAS NOTIFICACIONES DE MERCADOPAGO COMO PROCESADAS
-app.post("/updNotifications", verifyToken, async (req, res) => {
+/*app.post("/updNotifications", verifyToken, async (req, res) => {
 
 	notifications = await notification.findById(req.body.idPayment).then(async (document)=>
 	{
@@ -181,7 +181,7 @@ app.post("/updNotifications", verifyToken, async (req, res) => {
 		});
 	});
 	
-});
+});*/
 
 app.listen(PORT, () => {
   console.log(`The server is now running on Port ${PORT}`);
