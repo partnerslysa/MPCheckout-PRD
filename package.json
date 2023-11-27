@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "Mercado Pago Checkout Pro Middleware",
   "engines": {
-    "node": "14.15.0"
+    "node": "20.10.1"
   },
   "dependencies": {
     "express": "^4.17.1",
