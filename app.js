@@ -8,9 +8,9 @@ const user = require('./models/user');
 const verifyToken = require('./controllers/verifyToken');
 const config = require('./config');
 const PORT = process.env.PORT || 8080
-const mongoConnectionString = 'mongodb+srv://dmaker:oUTL8QNtVIEZmcDJ@integrations.bfoh2.mongodb.net/dmaker-prd?retryWrites=true&w=majority';
+//const mongoConnectionString = 'mongodb+srv://dmaker:oUTL8QNtVIEZmcDJ@integrations.bfoh2.mongodb.net/dmaker-prd?retryWrites=true&w=majority';
 
-mongoose.connect(mongoConnectionString, {useNewUrlParser: true, useUnifiedTopology: true});
+//mongoose.connect(mongoConnectionString, {useNewUrlParser: true, useUnifiedTopology: true});
 
 //user: dmaker
 //pass: oUTL8QNtVIEZmcDJ
